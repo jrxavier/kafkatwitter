@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33a40546-83c6-4114-b90b-7bf1f66a50cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jrxavier/kafka/twitter/client/TwitterProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jrxavier/kafka/twitter/client/TwitterProducer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jrxavier/kafka/twitter/client/TwitterProducer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="134" column="93" selection-start-line="134" selection-start-column="93" selection-end-line="134" selection-end-column="93" />
+              <caret line="140" column="97" lean-forward="true" selection-start-line="140" selection-start-column="97" selection-end-line="140" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,7 +209,7 @@
       <workItem from="1561419794874" duration="1398000" />
       <workItem from="1561936119617" duration="1459000" />
       <workItem from="1562110001862" duration="3531000" />
-      <workItem from="1562197418066" duration="744000" />
+      <workItem from="1562197418066" duration="1759000" />
     </task>
     <task id="LOCAL-00001" summary="Comitt&#10;inicial">
       <created>1560609262872</created>
@@ -230,7 +229,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10477000" />
+    <option name="totallyTimeSpent" value="11492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1346" height="861" extended-state="6" />
@@ -297,7 +296,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/jrxavier/kafka/twitter/client/TwitterProducer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
-          <caret line="134" column="93" selection-start-line="134" selection-start-column="93" selection-end-line="134" selection-end-column="93" />
+          <caret line="140" column="97" lean-forward="true" selection-start-line="140" selection-start-column="97" selection-end-line="140" selection-end-column="97" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -135,6 +135,12 @@ public class TwitterProducer {
         props.setProperty(ProducerConfig.RETRIES_CONFIG, Integer.toString(Integer.MAX_VALUE));
         props.setProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, "5"); //kafka 2.0 >= 1.1 se we can keep this 5. Otherwise use 1
 
+        //High throughput Producer (at the expensive of a bit of latency and CPU usage
+        props.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
+        props.setProperty(ProducerConfig.LINGER_MS_CONFIG, "20");
+        props.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, Integer.toString(32*1024)); // 32 Kb batch size
+
+
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 
         return producer;
