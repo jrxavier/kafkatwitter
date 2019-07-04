@@ -23,6 +23,10 @@ import java.util.concurrent.TimeUnit;
 
 public class TwitterProducer {
 
+    private String consumerKey = "uNCvDJDmHRlRNYDVIlO2DcSJd";
+    private String consumerSecret = "hMOacuSoDrU7i0I2gh2F1hhm8cQkUZnDnrwbWXUZZCQGCtQNQS";
+    private String token = "68777549-tYSNgqwFVyCet1ag1dmV1R0bxcNKIlCFK9pzVqqfG";
+    private String secret = "0DUlDAuylBl1eDjbPx17USCggNUpjiOtyTp0M8gc2KZGu";
 
     List<String> terms = Lists.newArrayList("bndes");
 
@@ -119,10 +123,17 @@ public class TwitterProducer {
     public KafkaProducer<String, String> createKafkaProducer() {
         String bootstrapServer = "127.0.0.1:9092";
 
+        //create producer properties
         Properties props = new Properties();
         props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         props.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         props.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+
+        //create safe producers1
+        props.setProperty(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, "true");
+        props.setProperty(ProducerConfig.ACKS_CONFIG, "all");
+        props.setProperty(ProducerConfig.RETRIES_CONFIG, Integer.toString(Integer.MAX_VALUE));
+        props.setProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, "5"); //kafka 2.0 >= 1.1 se we can keep this 5. Otherwise use 1
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 
