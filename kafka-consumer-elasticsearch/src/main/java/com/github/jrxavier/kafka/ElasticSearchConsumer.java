@@ -63,6 +63,9 @@ public class ElasticSearchConsumer {
         properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
+        properties.setProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false"); //disable autocommit of offset;
+        properties.setProperty(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "20");
+
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(properties);
         consumer.subscribe(Arrays.asList(topic));
 
@@ -84,12 +87,13 @@ public class ElasticSearchConsumer {
         Logger logger = LoggerFactory.getLogger(ElasticSearchConsumer.class.getName());
         RestHighLevelClient client = createClient();
 
-
         KafkaConsumer<String, String> consumer = createConsumer("twitter_tweets");
+
 
         while(true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
 
+            logger.info("Received " + records.count() + " records");
             for (ConsumerRecord<String, String> record : records) {
                 //2 strategies
                 //String id = record.topic() + record.partition() + record.offset()
@@ -108,6 +112,21 @@ public class ElasticSearchConsumer {
 
                 String responseId = response.getId();
                 logger.info(responseId);
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            logger.info("Committing offsets ...");
+            consumer.commitSync();
+            logger.info("Offsets have been committed");
+
+            //Desnecessario
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
 
