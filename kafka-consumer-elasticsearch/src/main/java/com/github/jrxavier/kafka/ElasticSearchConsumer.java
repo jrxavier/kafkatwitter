@@ -13,6 +13,8 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.elasticsearch.action.bulk.BulkRequest;
+import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -89,44 +91,51 @@ public class ElasticSearchConsumer {
 
         KafkaConsumer<String, String> consumer = createConsumer("twitter_tweets");
 
+        BulkRequest bulkRequest = new BulkRequest();
 
         while(true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
 
-            logger.info("Received " + records.count() + " records");
+            Integer recordsCount = records.count();
+
+            logger.info("Received " + recordsCount + " records");
+
             for (ConsumerRecord<String, String> record : records) {
                 //2 strategies
                 //String id = record.topic() + record.partition() + record.offset()
 
-                //tweet feed specific
-                String id = extractIdFromTweet(record.value());
-
-                //where we insert in Elasticsearch
-                IndexRequest indexRequest = new IndexRequest(
-                        "twitter",
-                        "tweets",
-                        id //this is to make our consumer idempotent
-                ).source(record.value(), XContentType.JSON);
-
-                IndexResponse response = client.index(indexRequest, RequestOptions.DEFAULT);
-
-                String responseId = response.getId();
-                logger.info(responseId);
                 try {
-                    Thread.sleep(10);
+                    //tweet feed specific
+                    String id = extractIdFromTweet(record.value());
+
+                    //where we insert in Elasticsearch
+                    IndexRequest indexRequest = new IndexRequest(
+                            "twitter",
+                            "tweets",
+                            id //this is to make our consumer idempotent
+                    ).source(record.value(), XContentType.JSON);
+
+                    bulkRequest.add(indexRequest);
+                } catch (NullPointerException e) {
+                    logger.warn("Bad data: " + record.value());
+                }
+
+            }
+
+            if(recordsCount > 0) {
+                //Envia ao Elastic todos os arquivos em batch
+                BulkResponse bulkItemResponses = client.bulk(bulkRequest, RequestOptions.DEFAULT);
+
+                logger.info("Committing offsets ...");
+                consumer.commitSync();
+                logger.info("Offsets have been committed");
+
+                //Desnecessario
+                try {
+                    Thread.sleep(10000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }
-            logger.info("Committing offsets ...");
-            consumer.commitSync();
-            logger.info("Offsets have been committed");
-
-            //Desnecessario
-            try {
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
         }
 

@@ -4,7 +4,6 @@
     <list default="true" id="33a40546-83c6-4114-b90b-7bf1f66a50cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-consumer-elasticsearch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-consumer-elasticsearch/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kafka-consumer-elasticsearch/src/main/java/com/github/jrxavier/kafka/ElasticSearchConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-consumer-elasticsearch/src/main/java/com/github/jrxavier/kafka/ElasticSearchConsumer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kafka-consumer-elasticsearch/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="697">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
@@ -46,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kafka-consumer-elasticsearch/src/main/java/com/github/jrxavier/kafka/ElasticSearchConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+            <state relative-caret-position="276">
+              <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,11 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kafka-producer-twitter/src/main/java/client/TwitterProducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="30" column="50" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-323">
+              <caret line="21" selection-start-line="20" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -113,6 +109,7 @@
         <option value="$PROJECT_DIR$/kafka-consumer-elasticsearch/src/main/java/com/github/jrxavier/kafka/ElastichsearchConsumer.java" />
         <option value="$PROJECT_DIR$/kafka-consumer-elasticsearch/src/main/java/com/github/jrxavier/kafka/ElastichSearchConsumer.java" />
         <option value="$PROJECT_DIR$/kafka-consumer-elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka-producer-twitter/src/main/java/client/TwitterProducer.java" />
         <option value="$PROJECT_DIR$/kafka-consumer-elasticsearch/src/main/java/com/github/jrxavier/kafka/ElasticSearchConsumer.java" />
       </list>
     </option>
@@ -136,89 +133,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-consumer-elasticsearch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-consumer-elasticsearch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-consumer-elasticsearch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-consumer-elasticsearch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-consumer-elasticsearch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-producer-twitter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-producer-twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-producer-twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-producer-twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kafkatwitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kafkatwitter" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka-producer-twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,8 +143,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet" />
@@ -357,7 +277,8 @@
       <workItem from="1562544353114" duration="3508000" />
       <workItem from="1563027589054" duration="3733000" />
       <workItem from="1563408288619" duration="679000" />
-      <workItem from="1563409582275" duration="1244000" />
+      <workItem from="1563409582275" duration="1463000" />
+      <workItem from="1565440344109" duration="2730000" />
     </task>
     <task id="LOCAL-00001" summary="Comitt&#10;inicial">
       <created>1560609262872</created>
@@ -380,17 +301,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562548945754</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Manual commit of offsets">
+      <created>1565442039799</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565442039799</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22221000" />
+    <option name="totallyTimeSpent" value="25170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1346" height="861" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.26899225" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.18062015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -404,7 +332,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.329235" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329235" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329235" />
@@ -429,7 +357,8 @@
     <MESSAGE value="Comitt&#10;inicial" />
     <MESSAGE value="gitignore" />
     <MESSAGE value="ElastciSearch Consumer versao inicial com refactor do projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="ElastciSearch Consumer versao inicial com refactor do projeto" />
+    <MESSAGE value="Manual commit of offsets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manual commit of offsets" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -442,13 +371,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-producer-twitter/src/main/java/client/TwitterProducer.java">
+    <entry file="file://$PROJECT_DIR$/kafka-consumer-elasticsearch/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="30" column="50" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="697">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
@@ -466,17 +392,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-consumer-elasticsearch/pom.xml">
+    <entry file="file://$PROJECT_DIR$/kafka-producer-twitter/src/main/java/client/TwitterProducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="-323">
+          <caret line="21" selection-start-line="20" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-consumer-elasticsearch/src/main/java/com/github/jrxavier/kafka/ElasticSearchConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        <state relative-caret-position="276">
+          <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
